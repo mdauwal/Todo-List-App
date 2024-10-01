@@ -1,13 +1,106 @@
+/* index.css */
+
+* {
+  box-sizing: border-box;
+}
+/* General styling */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: Arial, sans-serif;
+  margin: 3rem;
+  padding: 0;
+  background-color: #d7d7d7d7;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Container for the app */
+div {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Main heading styling */
+h1 {
+  font-size: 2.5rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Card component styling */
+.card {
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Subheading styling */
+h2 {
+  font-size: 1.8rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Actions container styling */
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Button styling */
+.btn {
+  font: inherit;
+  background-color: #800040;
+  color: white;
+  margin: 0 1rem;
+  border: 1px solid #800040;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #9c1458;
+  border-color: #9c1458;
+}
+.btn--alt {
+  background-color: transparent;
+  color: #800040;
+}
+.btn--alt:hover {
+  background-color: #d5d5d5;
+}
+
+/* Modal styling */
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  z-index: 100; /* To make sure it's above the backdrop */
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.modal p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75); /* Semi-transparent black background */
+  z-index: 10; /* To ensure it's behind the modal */
 }
